@@ -1,11 +1,7 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background circle -->
-  <circle cx="16" cy="16" r="16" fill="#22c55e"/>
-  
-  <!-- Radar icon in white -->
-  <g transform="translate(8, 8) scale(0.67)">
-    <path d="M5.636 5.636a9 9 0 1 0 12.728 0" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M8.464 8.464a5 5 0 1 0 7.072 0" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="12" y1="12" x2="12" y2="3" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description><dc:creator>RealFaviconGenerator</dc:creator><dc:source>https://realfavicongenerator.net</dc:source></rdf:Description></rdf:RDF></metadata><circle cx="16" cy="16" r="16" fill="#22c55e"></circle><g transform="translate(8, 8) scale(0.67)">
+    <path d="M5.636 5.636a9 9 0 1 0 12.728 0" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M8.464 8.464a5 5 0 1 0 7.072 0" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <line x1="12" y1="12" x2="12" y2="3" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></line>
+  </g><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>

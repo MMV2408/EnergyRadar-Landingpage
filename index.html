@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     :root {
       --green:    #22c55e;
       --green-d:  #16a34a;
@@ -22,16 +22,16 @@
       --white:    #ffffff;
       --radius:   14px;
     }
-
+ 
     html { scroll-behavior: smooth; }
-
+ 
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
       color: var(--slate);
       line-height: 1.6;
     }
-
+ 
     nav {
       position: sticky;
       top: 0;
@@ -45,7 +45,7 @@
       justify-content: space-between;
       height: 64px;
     }
-
+ 
     .nav-logo {
       font-size: 1.35rem;
       font-weight: 800;
@@ -53,12 +53,12 @@
       text-decoration: none;
       display: flex;
       align-items: center;
+      gap: .6rem;
     }
-
-    /* Stroom in slate, Radar in green */
-    .nav-logo .Energy { color: var(--slate); }
+ 
+    .nav-logo .energy { color: var(--slate); }
     .nav-logo .radar { color: var(--green); }
-
+ 
     nav a.cta-nav {
       background: var(--green);
       color: var(--white);
@@ -73,14 +73,14 @@
       background: var(--green-d);
       transform: translateY(-1px);
     }
-
+ 
     .hero {
       max-width: 1200px;
       margin: 0 auto;
       padding: 5rem 1.5rem 3.5rem;
       text-align: center;
     }
-
+ 
     .badge {
       display: inline-flex;
       align-items: center;
@@ -94,12 +94,12 @@
       margin-bottom: 1.4rem;
       animation: pulse 2s ease-in-out infinite;
     }
-
+ 
     @keyframes pulse {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.85; }
     }
-
+ 
     .hero h1 {
       font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 800;
@@ -107,16 +107,16 @@
       margin-bottom: 1.2rem;
       color: var(--slate);
     }
-
+ 
     .hero h1 em { font-style: normal; color: var(--green); }
-
+ 
     .hero p {
       font-size: 1.15rem;
       color: var(--slate-m);
       max-width: 560px;
       margin: 0 auto 2.2rem;
     }
-
+ 
     .waitlist-box {
       background: var(--white);
       border: 1px solid #e2e8f0;
@@ -126,17 +126,17 @@
       margin: 0 auto 1.5rem;
       box-shadow: 0 4px 24px rgba(0,0,0,.06);
     }
-
+ 
     .waitlist-box h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: .3rem; }
-
+ 
     .waitlist-box p.sub {
       font-size: .9rem;
       color: var(--slate-l);
       margin-bottom: 1.2rem;
     }
-
+ 
     .form-row { display: flex; gap: .6rem; flex-wrap: wrap; }
-
+ 
     .form-row input[type="email"] {
       flex: 1 1 200px;
       padding: .75rem 1rem;
@@ -147,12 +147,12 @@
       outline: none;
       transition: border-color .2s, box-shadow .2s;
     }
-
+ 
     .form-row input[type="email"]:focus { 
       border-color: var(--green);
       box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
     }
-
+ 
     .form-row button {
       background: var(--green);
       color: var(--white);
@@ -166,15 +166,15 @@
       transition: background .2s, transform .1s;
       white-space: nowrap;
     }
-
+ 
     .form-row button:hover { 
       background: var(--green-d);
       transform: translateY(-2px);
     }
     .form-row button:active { transform: scale(.97); }
-
+ 
     .privacy-note { font-size: .78rem; color: var(--slate-l); margin-top: .75rem; }
-
+ 
     .success-msg {
       display: none;
       align-items: center;
@@ -186,9 +186,9 @@
       font-weight: 600;
       margin-top: .75rem;
     }
-
+ 
     .section { max-width: 960px; margin: 0 auto; padding: 4rem 1.5rem; }
-
+ 
     .section-label {
       text-align: center;
       font-size: .8rem;
@@ -198,33 +198,118 @@
       color: var(--green);
       margin-bottom: .6rem;
     }
-
+ 
     .section h2 {
       text-align: center;
       font-size: clamp(1.5rem, 3.5vw, 2.1rem);
       font-weight: 800;
       margin-bottom: 3rem;
     }
-
+ 
+    /* Saldering warning block - exact zoals in screenshot */
+    .saldering-warning {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border: 2px solid #d97706;
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      max-width: 1240px;
+      margin: 0 auto 4rem;
+      box-shadow: 0 4px 24px rgba(217, 119, 6, 0.15);
+    }
+ 
+    .saldering-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+ 
+    .saldering-icon {
+      font-size: 2.5rem;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+ 
+    .saldering-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #92400e;
+      line-height: 1.3;
+      margin: 0;
+    }
+ 
+    .saldering-text {
+      font-size: 1.05rem;
+      color: #92400e;
+      line-height: 1.7;
+      margin-bottom: 1.8rem;
+    }
+ 
+    .saldering-text strong {
+      font-weight: 700;
+      color: #78350f;
+    }
+ 
+    .saldering-timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+ 
+    @media (max-width: 900px) {
+      .saldering-timeline {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+ 
+    @media (max-width: 500px) {
+      .saldering-timeline {
+        grid-template-columns: 1fr;
+      }
+    }
+ 
+    .timeline-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      padding: 1.3rem 1rem;
+      text-align: center;
+      border: 1.5px solid rgba(217, 119, 6, 0.2);
+    }
+ 
+    .timeline-year {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #d97706;
+      line-height: 1;
+      margin-bottom: .5rem;
+    }
+ 
+    .timeline-desc {
+      font-size: .95rem;
+      color: #92400e;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+ 
     .steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
       align-items: stretch;
     }
-
+ 
     @media (max-width: 900px) {
       .steps {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-
+ 
     @media (max-width: 600px) {
       .steps {
         grid-template-columns: 1fr;
       }
     }
-
+ 
     .step {
       background: var(--white);
       border: 1px solid #e2e8f0;
@@ -233,13 +318,13 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
       cursor: pointer;
     }
-
+ 
     .step:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       border-color: rgba(34, 197, 94, 0.3);
     }
-
+ 
     .step-num {
       width: 38px; height: 38px;
       background: var(--green-l);
@@ -253,26 +338,26 @@
       margin-bottom: 1rem;
       transition: transform 0.2s ease;
     }
-
+ 
     .step:hover .step-num {
       transform: scale(1.1);
     }
-
+ 
     .step h3 { font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
     .step p  { font-size: .9rem; color: var(--slate-m); }
-
+ 
     .features {
       background: var(--white);
       border-top: 1px solid #e2e8f0;
       border-bottom: 1px solid #e2e8f0;
     }
-
+ 
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
     }
-
+ 
     .feature-card {
       border: 1px solid #e2e8f0;
       border-radius: var(--radius);
@@ -282,27 +367,27 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
       will-change: transform;
     }
-
+ 
     .feature-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       border-color: rgba(34, 197, 94, 0.3);
     }
-
+ 
     .feature-icon {
       font-size: 2rem;
       margin-bottom: .75rem;
       transition: transform 0.2s ease;
       display: inline-block;
     }
-
+ 
     .feature-card:hover .feature-icon {
       transform: scale(1.15);
     }
-
+ 
     .feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; }
     .feature-card p  { font-size: .88rem; color: var(--slate-m); }
-
+ 
     .stats {
       display: flex;
       flex-wrap: wrap;
@@ -313,15 +398,15 @@
       margin: 0 auto;
       text-align: center;
     }
-
+ 
     .stat-item {
       transition: transform 0.2s ease;
     }
-
+ 
     .stat-item:hover {
       transform: scale(1.05);
     }
-
+ 
     .stat-value { 
       font-size: 2.4rem; 
       font-weight: 800; 
@@ -329,30 +414,30 @@
       line-height: 1;
     }
     .stat-label { font-size: .9rem; color: var(--slate-m); margin-top: .3rem; }
-
+ 
     .final-cta {
       background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
       color: var(--white);
       text-align: center;
       padding: 4.5rem 1.5rem;
     }
-
+ 
     .final-cta h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 1rem; }
-
+ 
     .final-cta p { font-size: 1.1rem; opacity: .9; max-width: 480px; margin: 0 auto 2rem; }
-
+ 
     .final-cta .waitlist-box {
       background: rgba(255,255,255,.15);
       border-color: rgba(255,255,255,.3);
       backdrop-filter: blur(8px);
     }
-
+ 
     .final-cta .waitlist-box h2,
     .final-cta .waitlist-box p.sub { color: var(--white); }
-
+ 
     .final-cta .form-row input[type="email"] { background: rgba(255,255,255,.9); }
     .final-cta .privacy-note { color: rgba(255,255,255,.7); }
-
+ 
     footer {
       text-align: center;
       padding: 2rem 1.5rem;
@@ -360,25 +445,25 @@
       color: var(--slate-l);
       border-top: 1px solid #e2e8f0;
     }
-
+ 
     footer a { 
       color: var(--slate-l);
       transition: color 0.2s;
     }
-
+ 
     footer a:hover {
       color: var(--green);
     }
-
+ 
     .divider { border: none; border-top: 1px solid #e2e8f0; }
-
+ 
     .waitlist-count {
       font-size: 0.8rem;
       color: var(--green);
       margin-top: 0.5rem;
       font-weight: 600;
     }
-
+ 
     /* Smooth fade-in animation for elements */
     @keyframes fadeInUp {
       from {
@@ -390,36 +475,36 @@
         transform: translateY(0);
       }
     }
-
+ 
     .hero, .section {
       animation: fadeInUp 0.6s ease-out;
     }
   </style>
 </head>
 <body>
-
+ 
 <nav>
   <a href="#" class="nav-logo">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.636 5.636a9 9 0 1 0 12.728 0"/><path d="M8.464 8.464a5 5 0 1 0 7.072 0"/><line x1="12" y1="12" x2="12" y2="3"/></svg>
-    <span class="Energy">Energy</span><span class="radar">Radar</span>
+    <span class="energy">Energy</span><span class="radar">Radar</span>
   </a>
   <a href="#wachtlijst" class="cta-nav">Aanmelden</a>
 </nav>
-
+ 
 <section class="hero">
   <div class="badge">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
     Binnenkort beschikbaar
   </div>
-
+ 
   <h1>Stop met geld weggooien<br/>aan <em>verspilde energie</em></h1>
-
+ 
   <p>
     Je levert stroom goedkoop terug en koopt het duur terug.<br><br>
     Dat kost je elke week geld — zonder dat je het doorhebt.<br><br>
     EnergyRadar laat zien wanneer dat gebeurt en hoe je dat voorkomt.
   </p>
-
+ 
   <div class="waitlist-box" id="wachtlijst">
     <h2>Wees er snel bij</h2>
     <p class="sub">Meld je aan voor de wachtlijst en meer info.</p>
@@ -437,7 +522,40 @@
     </div>
   </div>
 </section>
-
+ 
+<!-- SALDERING WARNING BLOCK -->
+<div class="saldering-warning">
+  <div class="saldering-header">
+    <div class="saldering-icon">⚠️</div>
+    <h2 class="saldering-title">Saldering verdwijnt — gebruik je eigen stroom of verlies geld</h2>
+  </div>
+  
+  <p class="saldering-text">
+    <strong>Nu</strong> kun je teruggeleverde zonnestroom nog 1-op-1 verrekenen met verbruik. 
+    <strong>Vanaf 2027</strong> wordt dit elk jaar minder, tot saldering in <strong>2031 volledig stopt</strong>. 
+    Dan krijg je nog maar €0,05-0,10 per kWh terug, terwijl je €0,30-0,40 betaalt voor inkoop.
+  </p>
+  
+  <div class="saldering-timeline">
+    <div class="timeline-card">
+      <div class="timeline-year">2026</div>
+      <div class="timeline-desc">100% saldering</div>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-year">2027</div>
+      <div class="timeline-desc">Begint af te bouwen</div>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-year">2028-30</div>
+      <div class="timeline-desc">Steeds minder</div>
+    </div>
+    <div class="timeline-card">
+      <div class="timeline-year">2031</div>
+      <div class="timeline-desc">Saldering stopt</div>
+    </div>
+  </div>
+</div>
+ 
 <section class="section">
   <p class="section-label">Zo werkt het</p>
   <h2>Zo ontdek je waar je geld verliest</h2>
@@ -450,7 +568,7 @@
     <div class="step">
       <div class="step-num">2</div>
       <h3>Meten</h3>
-      <p>Het apparaat leest continu je Energyverbruik en -teruglevering uit en stuurt je weekelijks een overzicht van elke dag.</p>
+      <p>Het apparaat leest continu je energieverbruik en -teruglevering uit en stuurt je weekelijks een overzicht van elke dag.</p>
     </div>
     <div class="step">
       <div class="step-num">3</div>
@@ -459,9 +577,9 @@
     </div>
   </div>
 </section>
-
+ 
 <hr class="divider" />
-
+ 
 <section class="features">
   <div class="section">
     <p class="section-label">Functies</p>
@@ -500,7 +618,7 @@
     </div>
   </div>
 </section>
-
+ 
 <div class="stats">
   <div class="stat-item">
     <div class="stat-value">€5 – €15</div>
@@ -515,11 +633,11 @@
     <div class="stat-label">per week met inzichten</div>
   </div>
 </div>
-
+ 
 <section class="final-cta">
   <h2>Klaar om te besparen?</h2>
   <p>Meld je nu aan en wees er als eerste bij wanneer EnergyRadar beschikbaar is.</p>
-
+ 
   <div class="waitlist-box" style="max-width:480px;margin:0 auto;">
     <h2>Zet je op de wachtlijst</h2>
     <p class="sub">Vroegboegkorting voor de eerste aanmelders.</p>
@@ -536,11 +654,11 @@
     </div>
   </div>
 </section>
-
+ 
 <footer>
-  <p>&copy; 2026 EnergyRadar &mdash; <a href="mailto:info@Energyradar.com">info@Energyradar.com</a></p>
+  <p>&copy; 2026 EnergyRadar &mdash; <a href="mailto:info@energyradar.nl">info@energyradar.nl</a></p>
 </footer>
-
+ 
 <script>
   (function () {
     const el = document.getElementById('counter');
@@ -557,13 +675,13 @@
     });
     observer.observe(el);
   })();
-
+ 
   function setupForm(formId, inputId, successId) {
     const form    = document.getElementById(formId);
     const input   = document.getElementById(inputId);
     const success = document.getElementById(successId);
     if (!form) return;
-
+ 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       const email = input.value.trim();
@@ -573,21 +691,21 @@
         return;
       }
       input.style.borderColor = '';
-
+ 
       const list = JSON.parse(localStorage.getItem('waitlist') || '[]');
       if (!list.includes(email)) {
         list.push(email);
         localStorage.setItem('waitlist', JSON.stringify(list));
       }
-
+ 
       const counter = document.getElementById('counter');
       if (counter) counter.textContent = parseInt(counter.textContent) + 1;
-
+ 
       form.style.display = 'none';
       success.style.display = 'flex';
     });
   }
-
+ 
   setupForm('waitlistForm',  'emailInput',  'successMsg');
   setupForm('waitlistForm2', 'emailInput2', 'successMsg2');
 </script>
